@@ -64,7 +64,10 @@ XKit.extensions.xneko = new Object({
 				XKit.extensions.xneko.think(XKit.extensions.xneko.neko);
 			}, 200);
 			$("#xneko").click(function() {
-				XKit.notifications.add("Meow!","ok");
+				// Enter random texts, Neko should say, here
+				var texts = ["Meow!","*purrrrss*","Meowy Christams!","I meow you!"];
+				var textNr = Math.floor(Math.random() * 10) % texts.length;
+				XKit.notifications.add(texts[textNr],"ok");
 				XKit.extensions.xneko.mouse_x = XKit.extensions.xneko.mouse_x + 60;
 				XKit.extensions.xneko.think(XKit.extensions.xneko.neko, true);
 			});
